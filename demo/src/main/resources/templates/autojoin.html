@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"></meta>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content=""></meta>
+<meta name="author" content=""></meta>
+
+<title>Auto Join</title>
+
+<!-- Latest jQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></link>
+<!-- Latest compiled and minified JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/main.js"></script>
+<script src="js/autojoin.js"></script>
+<link rel="stylesheet" href="css/main.css"></link>
+</head>
+
+<body>
+
+	<div class="container">
+
+		<!-- Static navbar -->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">Dota Apps</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="/">Home</a></li>
+						<li><a href="/sampletemplate">About</a></li>
+						<li><a href="/greeting?name=bob">greeting</a></li>
+					</ul>
+					<ul class="navbar-brand nav navbar-right">
+						<li><div id="timediv"></div></li>
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+			<!--/.container-fluid -->
+		</nav>
+
+		<div id="main-content">
+			<h1>Dota2 AutoJoin</h1>
+			<hr></hr>
+			<!--  button to join -->
+			<div class="row">
+				<div class="col-md-6">
+					<form class="form-inline">
+						<div class="form-group">
+							<label for="connect">AutoJoin Start:</label>
+							<button id="connect" class="btn btn-default" type="submit">Run</button>
+							<button id="disconnect" class="btn btn-default" type="submit"
+								disabled="disabled">Stop</button>
+						</div>
+					</form>
+				</div>				
+			</div>
+			<br/>
+			<div class="well" id="autojoinconsole">...</div>
+			<!-- <p th:text="'The time, ' + ${time} + '!'" />  -->
+
+		</div><!-- main-content -->
+	</div>
+</body>
+</html>
