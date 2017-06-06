@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
@@ -12,7 +13,9 @@ public class AutoJoinMessageHandler {
 	@MessageMapping("/autojoinmessage")
 	@SendTo("/topic/autojoin")
 	public SimpleStompMessage autojoinmessage(AutoJoinMessage message) throws Exception {
-		return new SimpleStompMessage("Hello, " + message.getMessage() + "!");
+		//System.out.println(Runtime.getRuntime().exec("tasklist"));
+		//return new SimpleStompMessage("Hello, " + message.getMessage() + "!");
+		return new SimpleStompMessage(message.getMessage());
 	}
 	
 }

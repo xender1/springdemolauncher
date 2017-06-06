@@ -21,6 +21,10 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
+<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+
 <script src="js/main.js"></script>
 <script src="js/autojoin.js"></script>
 <link rel="stylesheet" href="css/main.css"></link>
@@ -65,10 +69,19 @@
 								disabled="disabled">Stop</button>
 						</div>
 					</form>
-				</div>				
+				</div>	
+				        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="name">Message:</label>
+                    <input type="text" id="name" class="form-control" placeholder="Message to send..."></input>
+                </div>
+                <button id="send" class="btn btn-default" type="submit">Send</button>
+            </form>
+        </div>			
 			</div>
 			<br/>
-			<div class="well" id="autojoinconsole">...</div>
+			<div class="well" id="autojoinconsole"></div>
 			<!-- <p th:text="'The time, ' + ${time} + '!'" />  -->
 
 		</div><!-- main-content -->
