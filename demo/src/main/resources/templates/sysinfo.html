@@ -1,7 +1,72 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<meta charset="utf-8"></meta>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content=""></meta>
+<meta name="author" content=""></meta>
+
+<title>System Info</title>
+
+<!-- Latest jQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></link>
+<!-- Latest compiled and minified JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
+<script src="js/sysinfo.js"></script>
+<script src="js/main.js"></script>
+<link rel="stylesheet" href="css/main.css"></link>
 </head>
+
 <body>
-<h1>System Info</h1>
+	<div class="container">
+
+		<!-- Static navbar -->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">Dota Apps</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/">Home</a></li>
+						<li><a href="/autojoin">AutoJoin</a></li>
+						<li class="active"><a href="/sysinfo">Sys Info</a></li>
+						<li><a href="/greeting?name=bob">greeting</a></li>
+					</ul>
+					<ul class="navbar-brand nav navbar-right">
+						<li><div id="timediv"></div></li>
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+			<!--/.container-fluid -->
+		</nav>
+		
+		
+		<div id="main-content">	
+			<h1>System Info <small id="connectedStatusDiv">Connecting...</small></h1>
+			<hr></hr>
+			<button id="testAddButton" class="btn btn-default">Update Chart</button>
+			<button id="testRemoveButton" class="btn btn-default">Remove Value</button>
+			<hr></hr>
+			<canvas id="myChart" width="400" height="200"></canvas>
+
+		</div>
+	</div>
+
 </body>
 </html>

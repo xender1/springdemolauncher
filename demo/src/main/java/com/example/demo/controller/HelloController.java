@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.WMIObject;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -10,6 +11,8 @@ public class HelloController {
 
 	@RequestMapping("/helloworld")
 	public String helloworld() {
-		return "Hello world";
+		int c = WMIObject.getInstance().getWMICount();
+		return  Integer.toString(c);
+		//return "Hello world";
 	}
 }
